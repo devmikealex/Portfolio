@@ -1,0 +1,389 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 570px) {
+  html {
+    background: url("./assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  text-decoration: underline;
+}
+
+.big-text {
+  font-weight: 700;
+  color: white;
+  margin-left: 10%;
+  line-height: 1.3em;
+  letter-spacing: 0.1em;
+}
+.big-text {
+  font-size: 30px;
+}
+@media screen and (min-width: 320px) {
+  .big-text {
+    font-size: calc(5.2083333333vw + 13.3333333333px);
+  }
+}
+@media screen and (min-width: 800px) {
+  .big-text {
+    font-size: 55px;
+  }
+}
+.big-text span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-container {
+  margin-bottom: 120px;
+}
+@media screen and (min-width: 320px) {
+  .text-container {
+    margin-bottom: calc(-12.5vw + 160px);
+  }
+}
+@media screen and (min-width: 800px) {
+  .text-container {
+    margin-bottom: 60px;
+  }
+}
+
+h1 {
+  font-weight: 500;
+  color: #e0ffff;
+  margin: 0 0 0.5em;
+}
+h1 {
+  font-size: 18px;
+}
+@media screen and (min-width: 320px) {
+  h1 {
+    font-size: calc(1.6666666667vw + 12.6666666667px);
+  }
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 26px;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  color: #e0ffff;
+  margin: 0 0 1.4em;
+}
+h2 {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  h2 {
+    font-size: calc(1.6666666667vw + 10.6666666667px);
+  }
+}
+@media screen and (min-width: 800px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  color: #e0ffff;
+}
+h4 {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  h4 {
+    font-size: calc(0.8333333333vw + 13.3333333333px);
+  }
+}
+@media screen and (min-width: 800px) {
+  h4 {
+    font-size: 20px;
+  }
+}
+
+p {
+  font-weight: 300;
+  color: #e0ffff;
+  margin: 0.4em 0;
+}
+p {
+  font-size: 14px;
+}
+@media screen and (min-width: 320px) {
+  p {
+    font-size: calc(1.25vw + 10px);
+  }
+}
+@media screen and (min-width: 800px) {
+  p {
+    font-size: 20px;
+  }
+}
+p a {
+  font-weight: 500;
+}
+
+nav {
+  background-color: rgba(0, 20, 42, 0.278);
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0px 5%;
+  z-index: 1;
+}
+@media screen and (max-width: 570px) {
+  nav {
+    flex-direction: column;
+    margin-top: 8px;
+  }
+}
+nav ul {
+  display: flex;
+}
+nav ul li a {
+  margin: 10px;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e0ffff;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+@media screen and (max-width: 570px) {
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+.logo {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+.logo {
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  .logo {
+    font-size: calc(2.0833333333vw + 13.3333333333px);
+  }
+}
+@media screen and (min-width: 800px) {
+  .logo {
+    font-size: 30px;
+  }
+}
+.logo a {
+  color: inherit;
+}
+
+.main-text {
+  position: absolute;
+  left: 8%;
+  top: 15%;
+}
+
+.btn {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e0ffff;
+  font-family: "Asap", sans-serif;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#main video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+@media (max-width: 570px) {
+  #main video {
+    display: none;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(1, 24, 65, 0.7) 30%, rgba(0, 193, 203, 0));
+}
+
+.container {
+  padding: 16px;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    padding: calc(10vw - 16px);
+  }
+}
+@media screen and (min-width: 800px) {
+  .container {
+    padding: 64px;
+  }
+}
+.container {
+  padding-top: 32px;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    padding-top: calc(6.6666666667vw + 10.6666666667px);
+  }
+}
+@media screen and (min-width: 800px) {
+  .container {
+    padding-top: 64px;
+  }
+}
+.container {
+  padding-bottom: 32px;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    padding-bottom: calc(6.6666666667vw + 10.6666666667px);
+  }
+}
+@media screen and (min-width: 800px) {
+  .container {
+    padding-bottom: 64px;
+  }
+}
+
+#projects {
+  background-color: rgba(0, 29, 62, 0.83);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#contacts {
+  background-color: rgba(0, 62, 42, 0.83);
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 0 50%;
+  max-width: 400px;
+  background-color: rgba(0, 11, 25, 0.2);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.4rem;
+  box-shadow: rgba(74, 255, 186, 0.4) 0px 40px 70px -20px;
+}
+.card h4 {
+  color: rgb(0, 255, 174);
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+.card .image {
+  margin-bottom: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  position: relative;
+}
+.card .image:after {
+  content: "";
+  display: block;
+  padding-bottom: 70%;
+}
+.card .image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.card ul {
+  color: #62dede;
+  list-style: circle;
+  margin-left: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.github-link {
+  color: #e0ffff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+.github-link a {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+}
+
+.contacts-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #e0ffff;
+}
+.contacts-icons {
+  gap: 16px;
+}
+@media screen and (min-width: 320px) {
+  .contacts-icons {
+    gap: calc(6.6666666667vw - 5.3333333333px);
+  }
+}
+@media screen and (min-width: 800px) {
+  .contacts-icons {
+    gap: 48px;
+  }
+}
