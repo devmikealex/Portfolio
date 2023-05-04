@@ -14,6 +14,7 @@ $size: 570px;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    // border: 1px solid red;
 }
 
 html {
@@ -40,10 +41,13 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+    padding: 0.7rem; 
 
-    &:hover {
-        @include hover;
-        text-decoration: underline;
+    @media (hover: hover) {
+        &:hover {
+            @include hover;
+            text-decoration: underline;
+        }
     }
 }
 
@@ -74,6 +78,10 @@ h1 {
     @include interpolate(font-size, 18px, 26px);
     color: #e0ffff;
     margin: 0 0 0.5em;
+
+    @media screen and (max-width: $size) {
+        margin-top: 2rem;
+    }
 }
 
 h2 {
@@ -115,7 +123,7 @@ nav {
 
     @media screen and (max-width: $size) {
         flex-direction: column;
-        margin-top: 8px;
+        // margin-top: 8px;
     }
 
     ul {
@@ -132,13 +140,16 @@ nav {
             color: #e0ffff;
             transition: 0.3s;
 
-            &:hover {
-                @include hover;
+
+            @media (hover: hover) {
+                &:hover {
+                    @include hover;
+                }
             }
 
             @media screen and (max-width: $size) {
                 // padding: 0.5em;
-            font-size: 0.9rem;
+                font-size: 0.9rem;
             }
         }
     }
@@ -150,15 +161,25 @@ nav {
     // font-size: 2rem;
     @include interpolate(font-size, 20px, 30px);
 
-    a{
+    a {
         color: inherit;
+    }
+
+    @media screen and (max-width: $size) {
+        margin-top: 8px;
     }
 }
 
 .main-text {
-    position: absolute;
-    left: 8%;
-    top: 15%;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    // padding-left: 24px;
+    @include interpolate(padding-left, 24px, 84px);
+
+    // position: absolute;
+    // left: 8%;
+    // top: 15%;
+
     // transform: translate(-13%, -42%);
 
     // a {
@@ -212,6 +233,7 @@ nav {
 
 .overlay {
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
@@ -240,7 +262,7 @@ nav {
     background-color: rgb(0, 62, 42, 0.83);
 }
 
-.cards-wrapper{
+.cards-wrapper {
     display: flex;
     justify-content: center;
     gap: 4rem;
@@ -284,7 +306,7 @@ nav {
             position: absolute;
             width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: cover;
         }
     }
 
@@ -292,7 +314,7 @@ nav {
         font-size: 1rem;
         margin-bottom: 0.5rem;
     }
-    
+
     ul {
         color: #62dede;
         list-style: circle;
@@ -315,12 +337,45 @@ nav {
     }
 }
 
+#contacts {
+    backdrop-filter: blur(6px);
+}
+
 .contacts-icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     // gap: 2rem;
-    @include interpolate(gap, 16px, 48px);
+    @include interpolate(gap, 16px, 64px);
     font-size: 1.2rem;
     color: #e0ffff;
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        // display: ;
+        // transform: translateY(8px);
+        margin-right: 0.7rem;
+    }
+
+    @media screen and (max-width: $size) {
+        flex-direction: column;
+        // align-items: center;
+        gap: 1.4rem;
+        // margin-left: 3rem;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+.cv-download {
+    margin-left: -0.7rem;
+}
+
+.invisible{
+    visibility: hidden;
+    padding: 0;
 }

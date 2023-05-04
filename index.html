@@ -49,7 +49,6 @@
 
             <p class="cv-download"><a href="/cv-mike-alex.pdf">download("cv.pdf");</a></p>
             <p>.</p>
-            <p>.</p>
             <p>days.forEach(day => coding(day));</p>
             <p>// TODO Sleep</p>
             <!-- <a href="#" class="btn">Let's go!</a> -->
@@ -57,17 +56,17 @@
     </header>
 
     <main>
-        <a id="projects-a"></a>
+        <a id="projects-a" class="invisible"></a>
         <section id="projects" class="container">
             <h2>My projects =></h2>
             <div class="cards-wrapper">
 
                 <article class="card">
                     <h4>
-                        <a href="https://devmikealex.github.io/YouTube-Tags-Helper/">
+                        <a href="https://devmikealex.github.io/YouTube-Tags-Helper/" target="_blank">
                             YouTube Tags Helper</a>
                         </h4>
-                        <div class="github-link"><a href="https://github.com/devmikealex/YouTube-Tags-Helper">
+                        <div class="github-link"><a href="https://github.com/devmikealex/YouTube-Tags-Helper" target="_blank">
                             <img src="./assets/github.svg" alt="github logo" width="16px" height="16px"> github</a>
                         </div>
                     <div class="image"><img src="./assets/yth.jpg" alt="YouTube Tags Helper"></div>
@@ -82,10 +81,10 @@
 
                 <article class="card">
                     <h4>
-                        <a href="https://devmikealex.github.io/Timer/">
+                        <a href="https://devmikealex.github.io/Timer/" target="_blank">
                             Timer PWA</a>
                     </h4>
-                    <div class="github-link"><a href="https://github.com/devmikealex/Timer">
+                    <div class="github-link"><a href="https://github.com/devmikealex/Timer" target="_blank">
                         <img src="./assets/github.svg" alt="github logo" width="16px" height="16px"> github</a>
                     </div>
                     <div class="image"><img src="./assets/timer.jpg" alt="Timer PWA"></div>
@@ -100,10 +99,10 @@
 
                 <article class="card">
                     <h4>
-                        <a href="https://devmikealex.github.io/password-generator/">
+                        <a href="https://devmikealex.github.io/password-generator/" target="_blank">
                             Password Generator</a>
                     </h4>
-                    <div class="github-link"><a href="https://github.com/devmikealex/password-generator">
+                    <div class="github-link"><a href="https://github.com/devmikealex/password-generator" target="_blank">
                         <img src="./assets/github.svg" alt="github logo" width="16px" height="16px"> github</a>
                     </div>
                     <div class="image"><img src="./assets/passgen.jpg" alt="Password Generator"></div>
@@ -117,10 +116,10 @@
 
                 <article class="card">
                     <h4>
-                        <a href="https://devmikealex.github.io/Self-Test/">
+                        <a href="https://devmikealex.github.io/Self-Test/" target="_blank">
                             Self Test</a>
                     </h4>
-                    <div class="github-link"><a href="https://github.com/devmikealex/Self-Test">
+                    <div class="github-link"><a href="https://github.com/devmikealex/Self-Test" target="_blank">
                         <img src="./assets/github.svg" alt="github logo" width="16px" height="16px"> github</a>
                     </div>
                     <div class="image"><img src="./assets/selftest.jpg" alt="Self Test"></div>
@@ -135,10 +134,10 @@
 
                 <article class="card">
                     <h4>
-                        <a href="https://devmikealex.github.io/Blino-Meter/">
+                        <a href="https://devmikealex.github.io/Blino-Meter/" target="_blank">
                             Blino-Meter</a>
                     </h4>
-                    <div class="github-link"><a href="https://github.com/devmikealex/Blino-Meter">
+                    <div class="github-link"><a href="https://github.com/devmikealex/Blino-Meter" target="_blank">
                         <img src="./assets/github.svg" alt="github logo" width="16px" height="16px"> github</a>
                     </div>
                     <div class="image"><img src="./assets/blino.jpg" alt="Blino-Meter"></div>
@@ -153,10 +152,10 @@
 
                 <article class="card">
                     <h4>
-                        <a href="https://devma.site/getsteam/">
+                        <a href="https://devma.site/getsteam/" target="_blank">
                             Get Steam PHP</a>
                     </h4>
-                    <div class="github-link"><a href="https://github.com/devmikealex/Get-Steam-PHP">
+                    <div class="github-link"><a href="https://github.com/devmikealex/Get-Steam-PHP" target="_blank">
                         <img src="./assets/github.svg" alt="github logo" width="16px" height="16px"> github</a>
                     </div>
                     <div class="image"><img src="./assets/steam.jpg" alt="Get Steam PHP"></div>
@@ -171,12 +170,16 @@
             </div>
         </section>
 
-        <section id="contacts" class="container"><a id="contacts-a"></a>
+        <a id="contacts-a" class="invisible"></a>
+        <section id="contacts" class="container">
             <!-- <h2>Contacts =></h2> -->
                 <div class="contacts-icons">
-                    <a href="https://github.com/devmikealex" target="_blank">GitHub</a>
-                    <a href="https://t.me/devmikea" target="_blank">Telegram</a>
-                    <a href="" target="_blank">Gmail</a>
+                    <a href="https://github.com/devmikealex" target="_blank">
+                        <img src="./assets/github.svg" alt="github logo" width="32px" height="32px">GitHub</a>
+                    <a href="https://t.me/devmikea" target="_blank">
+                        <img src="./assets/tg.svg" alt="github logo" width="32px" height="32px">Telegram</a>
+                    <a href="mailto:1@1.com">
+                        <img src="./assets/gmail.svg" alt="github logo" width="32px" height="32px">Gmail</a>
                 </div>
         </section>
     </main>
@@ -185,6 +188,8 @@
     <script>
         setURLtoCountStart('/c/count.php')
     </script>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>

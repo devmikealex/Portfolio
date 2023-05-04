@@ -27,11 +27,14 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+  padding: 0.7rem;
 }
-a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  text-decoration: underline;
+@media (hover: hover) {
+  a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    text-decoration: underline;
+  }
 }
 
 .big-text {
@@ -88,6 +91,11 @@ h1 {
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 26px;
+  }
+}
+@media screen and (max-width: 570px) {
+  h1 {
+    margin-top: 2rem;
   }
 }
 
@@ -165,7 +173,6 @@ nav {
 @media screen and (max-width: 570px) {
   nav {
     flex-direction: column;
-    margin-top: 8px;
   }
 }
 nav ul {
@@ -181,9 +188,11 @@ nav ul li a {
   color: #e0ffff;
   transition: 0.3s;
 }
-nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+@media (hover: hover) {
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
 }
 @media screen and (max-width: 570px) {
   nav ul li a {
@@ -211,11 +220,28 @@ nav ul li a:hover {
 .logo a {
   color: inherit;
 }
+@media screen and (max-width: 570px) {
+  .logo {
+    margin-top: 8px;
+  }
+}
 
 .main-text {
-  position: absolute;
-  left: 8%;
-  top: 15%;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+.main-text {
+  padding-left: 24px;
+}
+@media screen and (min-width: 320px) {
+  .main-text {
+    padding-left: calc(12.5vw - 16px);
+  }
+}
+@media screen and (min-width: 800px) {
+  .main-text {
+    padding-left: 84px;
+  }
 }
 
 .btn {
@@ -247,6 +273,7 @@ nav ul li a:hover {
 
 .overlay {
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -367,6 +394,11 @@ nav ul li a:hover {
   align-items: center;
 }
 
+#contacts {
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
 .contacts-icons {
   display: flex;
   flex-wrap: wrap;
@@ -379,11 +411,37 @@ nav ul li a:hover {
 }
 @media screen and (min-width: 320px) {
   .contacts-icons {
-    gap: calc(6.6666666667vw - 5.3333333333px);
+    gap: calc(10vw - 16px);
   }
 }
 @media screen and (min-width: 800px) {
   .contacts-icons {
-    gap: 48px;
+    gap: 64px;
   }
+}
+.contacts-icons a {
+  display: flex;
+  align-items: center;
+}
+.contacts-icons img {
+  margin-right: 0.7rem;
+}
+@media screen and (max-width: 570px) {
+  .contacts-icons {
+    flex-direction: column;
+    gap: 1.4rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.cv-download {
+  margin-left: -0.7rem;
+}
+
+.invisible {
+  visibility: hidden;
+  padding: 0;
 }
